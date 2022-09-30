@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context=".SignInActivity">
+
+    <ImageView
+        android:id="@+id/background_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_city" />
+
+    <ImageView
+        android:id="@+id/background_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp" />
+
+    <ImageView
+        android:id="@+id/smartHouse"
+        android:layout_width="106dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/smart_house_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background_city" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Smart House"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smartHouse" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/white"
+        android:hint="Email"
+        android:textColor="@color/white"
+        android:textColorHint="?android:attr/textColorHintInverse"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/background_city"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextPass"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/white"
+        android:hint="Password"
+        android:textColor="@color/white"
+        android:textColorHint="?android:attr/textColorHintInverse"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/background_city"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        android:inputType="textNoSuggestions|textPassword"
+        android:privateImeOptions="nm" />
+
+    <Button
+        android:id="@+id/sign_in_btn"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/black_purple"
+        android:text="Enter Your House"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPass" />
+
+    <Button
+        android:id="@+id/reg_btn"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/dark_state_purple"
+        android:text="New Resident"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_btn" />
+
+    <TextView
+        android:id="@+id/textAttempts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Attempts"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_btn" />
+
+    <TextView
+        android:id="@+id/textNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/background_city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAttempts"
+        app:layout_constraintVertical_bias="0.058" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
