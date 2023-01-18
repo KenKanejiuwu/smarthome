@@ -31,7 +31,7 @@ public class SignInActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(email.getText().toString().equals("admin@mail.com") &&
+                if(email.getText().toString().equals("admin") &&
                         pass.getText().toString().equals("qwer")) {
                     Intent intent = new Intent(SignInActivity.this, MainActivity.class);
                     startActivity(intent);
