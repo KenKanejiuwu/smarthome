@@ -5,53 +5,46 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
+import android.hardware.lights.Light;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
 
-import com.example.demo22.databinding.ActivityMainBinding;
+import com.example.demo22.databinding.ActivityRoomBinding;
 import com.example.demo22.fragments.HomeFragment;
+import com.example.demo22.fragments.LightFragment;
 import com.example.demo22.fragments.RoutinesFragment;
 import com.example.demo22.fragments.SettingsFragment;
 import com.example.demo22.fragments.StaticsFragment;
+import com.example.demo22.fragments.ThermoFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class RoomActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
+    ActivityRoomBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityRoomBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new HomeFragment());
+        replaceFragment(new LightFragment());
 
-        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+        binding.TopNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {
-                case R.id.home_frame:
-                    replaceFragment(new HomeFragment());
+                case R.id.light_frame:
+                    replaceFragment(new LightFragment());
                     break;
-                case R.id.statics_frame:
-                    replaceFragment(new StaticsFragment());
-                    break;
-                case R.id.routines_frame:
-                    replaceFragment(new RoutinesFragment());
-                    break;
-                case R.id.setting_frame:
-                    replaceFragment(new SettingsFragment());
+                case R.id.thermostat_frame:
+                    replaceFragment(new ThermoFragment());
                     break;
             }
-
             return true;
-            });
-        }
+        });
+    }
 
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commit();
     }
 }

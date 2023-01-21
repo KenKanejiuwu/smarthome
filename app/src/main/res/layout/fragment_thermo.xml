@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ThermoFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="24dp"
+        android:layout_gravity="left"
+        android:text="Thermostat"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        android:layout_marginLeft="24dp"
+        android:layout_gravity="left"
+        android:text="Kitchen"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="24dp"
+        android:layout_gravity="left"
+        android:text="30"
+        android:textColor="@color/black_purple"
+        android:textSize="86sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="121dp"
+        android:layout_gravity="left"
+        android:text="°"
+        android:textColor="@color/non_active_inside"
+        android:textSize="86sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="365dp"
+        android:layout_marginLeft="24dp"
+        android:layout_gravity="left"
+        android:text="Temperature,°C"
+        android:textColor="@color/non_active_inside"
+        android:textSize="18sp"/>
+
+    <CheckBox
+        android:id="@+id/check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:checked="true"
+        android:clickable="false"
+        android:drawableRight="@drawable/check_box_selector"
+        android:focusable="false"
+        android:textColor="@color/black_purple"
+        android:layout_gravity="right"
+        android:layout_marginTop="42dp"
+        android:layout_marginRight="24dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <me.tankery.lib.circularseekbar.CircularSeekBar
+            android:id="@+id/seek_bar_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205dp"
+            app:cs_circle_color="@color/black_purple"
+            app:cs_circle_fill="@color/white"
+            app:cs_circle_progress_color="@color/black_purple"
+            app:cs_circle_stroke_width="6dp"
+            app:cs_circle_style="round"
+            app:cs_circle_x_radius="0dp"
+            app:cs_circle_y_radius="0dp"
+            app:cs_disable_pointer="false"
+            app:cs_disable_progress_glow="true"
+            app:cs_hide_progress_when_empty="true"
+            app:cs_lock_enabled="true"
+            app:cs_maintain_equal_circle="true"
+            app:cs_max="100"
+            app:cs_move_outside_circle="true"
+            app:cs_negative_enabled="false"
+            app:cs_pointer_alpha_ontouch="5"
+            app:cs_pointer_angle="0"
+            app:cs_pointer_color="@color/black_purple"
+            app:cs_pointer_stroke_width="18dp"
+            app:cs_progress="30"
+            app:cs_start_angle="90"
+            app:cs_use_custom_radii="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

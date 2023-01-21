@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LightFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="24dp"
+        android:layout_gravity="left"
+        android:text="Main light"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="24dp"
+        android:layout_gravity="left"
+        android:text="Kitchen"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="121dp"
+        android:layout_marginRight="142dp"
+        android:layout_gravity="right"
+        android:text="lm"
+        android:textColor="@color/non_active_inside"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:layout_marginRight="165dp"
+        android:layout_gravity="right"
+        android:text="45"
+        android:textColor="@color/black_purple"
+        android:textSize="94sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="219dp"
+        android:layout_marginRight="163dp"
+        android:layout_gravity="right"
+        android:text="light strength"
+        android:textColor="@color/non_active_inside"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginRight="24dp"
+        android:layout_gravity="right"
+        android:background="@drawable/ic_baseline_power_settings_new_24" />
+</FrameLayout>

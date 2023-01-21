@@ -3,16 +3,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".fragments.HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:background="@color/white_smoke">
 
     <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/dark_state_purple"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+    </androidx.appcompat.widget.Toolbar>
+
     <TextView
+        android:id="@+id/textUrHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="24sp"
-        android:textColor="@color/white_smoke"
-        android:layout_gravity="center"/>
+        android:layout_gravity="left"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Your Home"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="45dp"
+        android:text="2715 Ash Dr. San Jose, South Dakota 83475"
+        android:textColor="@android:color/secondary_text_light_nodisable"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button"
+        android:layout_gravity="right"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="16dp" />
+
+    <Button
+        android:id="@+id/btn_room2"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="136dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Kitchen"
+        android:textAllCaps="false"
+        android:textColor="@color/black_purple"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:onClick="RoomScreen"
+        app:icon="@drawable/room2"
+        app:iconGravity="textTop"
+        app:iconSize="60dp"
+        app:iconTint="@color/black_purple" />
+
+    <Button
+        android:id="@+id/btn_room1"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="136dp"
+        android:layout_marginLeft="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Living Room"
+        android:textAllCaps="false"
+        android:textColor="@color/black_purple"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:icon="@drawable/room1"
+        app:iconGravity="textTop"
+        app:iconSize="60dp"
+        app:iconTint="@color/black_purple" />
+
+    <Button
+        android:id="@+id/btn_room3"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="284dp"
+        android:layout_marginLeft="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Bathroom"
+        android:textAllCaps="false"
+        android:textColor="@color/black_purple"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:icon="@drawable/room3"
+        app:iconGravity="textTop"
+        app:iconSize="60dp"
+        app:iconTint="@color/black_purple" />
 
 </FrameLayout>
