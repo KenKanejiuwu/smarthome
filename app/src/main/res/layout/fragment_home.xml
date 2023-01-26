@@ -8,99 +8,126 @@
     android:background="@color/white_smoke">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@color/dark_state_purple"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme">
-    </androidx.appcompat.widget.Toolbar>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textUrHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Your Home"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/dark_state_purple"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/textLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="45dp"
-        android:text="2715 Ash Dr. San Jose, South Dakota 83475"
-        android:textColor="@android:color/secondary_text_light_nodisable"
-        android:textSize="12sp" />
+        <TextView
+            android:id="@+id/textUrHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Your Home"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
-    <Button
-        android:id="@+id/plus"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/button"
-        android:layout_gravity="right"
-        android:layout_marginTop="75dp"
-        android:layout_marginRight="16dp" />
+        <TextView
+            android:id="@+id/textLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:text="2715 Ash Dr. San Jose, South Dakota 83475"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/textUrHome" />
 
-    <Button
-        android:id="@+id/btn_room2"
-        android:layout_width="150dp"
-        android:layout_height="130dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="136dp"
-        android:layout_marginRight="16dp"
-        android:backgroundTint="@color/white"
-        android:text="Kitchen"
-        android:textAllCaps="false"
-        android:textColor="@color/black_purple"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:onClick="RoomScreen"
-        app:icon="@drawable/room2"
-        app:iconGravity="textTop"
-        app:iconSize="60dp"
-        app:iconTint="@color/black_purple" />
+        <Button
+            android:id="@+id/plus"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="16dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconPadding="0dp"
+            app:iconSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <Button
-        android:id="@+id/btn_room1"
-        android:layout_width="150dp"
-        android:layout_height="130dp"
-        android:layout_gravity="left"
-        android:layout_marginTop="136dp"
-        android:layout_marginLeft="16dp"
-        android:backgroundTint="@color/white"
-        android:text="Living Room"
-        android:textAllCaps="false"
-        android:textColor="@color/black_purple"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:icon="@drawable/room1"
-        app:iconGravity="textTop"
-        app:iconSize="60dp"
-        app:iconTint="@color/black_purple" />
+        <Button
+            android:id="@+id/btn_room2"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:onClick="RoomScreen"
+            android:text="Kitchen"
+            android:textAllCaps="false"
+            android:textColor="@color/black_purple"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:icon="@drawable/room2"
+            app:iconGravity="textTop"
+            app:iconSize="60dp"
+            app:iconTint="@color/black_purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <Button
-        android:id="@+id/btn_room3"
-        android:layout_width="150dp"
-        android:layout_height="130dp"
-        android:layout_gravity="left"
-        android:layout_marginTop="284dp"
-        android:layout_marginLeft="16dp"
-        android:backgroundTint="@color/white"
-        android:text="Bathroom"
-        android:textAllCaps="false"
-        android:textColor="@color/black_purple"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:icon="@drawable/room3"
-        app:iconGravity="textTop"
-        app:iconSize="60dp"
-        app:iconTint="@color/black_purple" />
+        <Button
+            android:id="@+id/btn_room1"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/white"
+            android:text="Living Room"
+            android:textAllCaps="false"
+            android:textColor="@color/black_purple"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:icon="@drawable/room1"
+            app:iconGravity="textTop"
+            app:iconSize="60dp"
+            app:iconTint="@color/black_purple"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <Button
+            android:id="@+id/btn_room3"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="180dp"
+            android:backgroundTint="@color/white"
+            android:text="Bathroom"
+            android:textAllCaps="false"
+            android:textColor="@color/black_purple"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:icon="@drawable/room3"
+            app:iconGravity="textTop"
+            app:iconSize="60dp"
+            app:iconTint="@color/black_purple"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

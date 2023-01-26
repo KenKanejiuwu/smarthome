@@ -8,7 +8,7 @@
     <item
         android:drawable="@drawable/white_toggle_icon"
         android:right="5dp"
-        android:left="34dp"
+        android:left="36dp"
         android:bottom="5dp"
         android:top="5dp">
     </item>
